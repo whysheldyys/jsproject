@@ -59,3 +59,22 @@ console.log(company.managers?.name);
 //настроить eslint
 
 //запушить на github
+
+const ID = Symbol("id");
+
+const user = {
+  name: "Alex",
+  [ID]: 123,
+};
+
+console.log(user[ID]);
+
+const secret = Symbol("secret");
+
+const obj = {
+  name: "Bob",
+  [secret]: "hidden_value",
+};
+
+console.log(obj.secret);
+console.log(obj[secret]);
